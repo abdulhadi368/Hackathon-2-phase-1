@@ -22,3 +22,7 @@ def update_item(item_id, new_name):
 def delete_item(item_id):
     global data
     data = [item for item in data if item["id"] != item_id]
+    
+def search_item(name):
+    results = [item for item in data if name.lower() in item['name'].lower()]
+    return results
